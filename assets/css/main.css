@@ -1,0 +1,643 @@
+/*****************************************
+************ Main: index.html ************
+******************************************/
+
+
+/*****************************************
+** Header
+*/
+
+
+/*****************************************
+** Parlex Scroll
+*/
+#box-1 {
+  height:100vh;
+  width:100%;
+  background-image:url(../../assets/img/ubuntu-wallpaper.jpg);
+  background-size:cover;
+  display:table;
+  background-attachment:fixed;
+}
+
+/*Terminal*/
+#box-1 #terminalWrapper {
+  height: 325px;
+  width: 600px;
+  top: 30vh;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+#box-1 #terminal {
+  position: relative;
+  margin: auto;
+  height: 325px;
+  width: 600px;
+  font-family: 'Ubuntu Mono';
+  font-size: 16px;
+  overflow: hidden;
+  background: #2C001E;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.75);
+}
+
+@media (max-width:767px) {
+  #box-1 #terminalWrapper, #box-1 #terminal {
+    width: 100%;
+  }
+}
+
+#box-1 #fileBar {
+  width: 100%;
+  height: 20px;
+  color: white;
+  position: relative;
+  -webkit-user-select: none;
+  text-align: center;
+  overflow: hidden;
+  background: -ms-linear-gradient(top, #A9A9A9 0%, #333333 100%);
+  background: -o-linear-gradient(top, #A9A9A9 0%, #333333 100%);
+  background: linear-gradient(top, #A9A9A9 0%, #333333 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #595959), color-stop(100%, #404040));
+  background: -moz-linear-gradient(top, #A9A9A9 0%, #333333 100%);
+  filter: progid: DXImageTransform.Microsoft.Gradient(startColorstr='#595959', endColorstr='#404040', GradientType=0);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#box-1 #fileBar span {
+  padding-left: 10px;
+  cursor: default;
+}
+
+/*Having issues with long user names and input wrapping*/
+#box-1 input#terminalInput {
+  color: white;
+  font-family: 'Ubuntu Mono';
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background: none;
+  width: 50%;
+}
+
+#box-1 input#terminalInput::-ms-clear {
+  display: none;
+}
+
+#box-1 div#terminalOutput {
+  height: 94%;
+  padding-left: 2px;
+  width: 100%;
+  overflow-y: hidden;
+  line-height: 18px;
+  color: white;
+  position: relative;
+}
+
+#box-1 #terminalOutput #element1, #box-1 #terminalOutput #element2 {
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width:767px) {
+  #box-1 #terminalOutput #element1 img, #box-1 #terminalOutput #element2 img {
+    width: 100%;
+  }
+}
+
+/*End terminal*/
+
+#box-1 .header-overlay {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 5;
+  color: #fff;
+  padding-top: 70px;
+}
+
+#box-1 .header-left {
+  display: table;
+  margin: 0 auto;
+  text-align: center;
+  height: 100vh;
+  padding: 10px;
+}
+
+#box-1 .vertical-align {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#box-1 .header-right {
+  display: table;
+  text-align: center;
+  height: 100vh;
+}
+
+#box-1 .header-right img {
+  zoom: 0;  /*increase if you have very small images*/
+  display: block;
+  margin: auto;
+  height: auto;
+  max-height: 100%;
+  width: auto;
+  max-width: 100%;
+}
+
+#box-1 .header-logo {
+  height: auto;
+  width: 300px;
+}
+
+#box-2 {
+  height:100vh;
+  width:100%;
+  background-image:url(../../assets/img/ameh-header1.jpg);
+  background-size:cover;
+  display:table;
+  background-attachment:fixed;
+}
+
+#box-3 {
+  height:100vh;
+  width:100%;
+  background-image:url(../../assets/img/i3.jpg);
+  background-size:cover;
+  display:table;
+  background-attachment:fixed;
+}
+
+/*#box-3 #carousel {
+  height: 90vh;
+  width: 100%;
+}
+
+#box-3 .carousel-indicators-numbers li {
+      text-indent: 0;
+      margin: 0 2px;
+      width: 30px;
+      height: 30px;
+      border: none;
+      border-radius: 100%;
+      line-height: 30px;
+      color: #fff;
+      background-color: #999;
+      transition: all 0.25s ease;
+}
+
+#box-3 .carousel-indicators-numbers li.active, #box-3 .carousel-indicators-numbers li:hover {
+    margin: 0 2px;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+}
+
+#box-3 p {
+  color:#7d8285;
+}
+
+#box-3 h2 {
+  font-weight:bold;
+  margin-bottom:40px;
+  padding-top:40px;
+  color:inherit;
+}
+
+@media (max-width:767px) {
+  #box-3 h2 {
+    margin-bottom:25px;
+    padding-top:25px;
+    font-size:24px;
+  }
+}
+
+#box-3 .intro {
+  height: 10vh;
+  font-size:16px;
+  max-width:500px;
+  margin:0 auto;
+}
+
+#box-3 .intro p {
+  margin-bottom:0;
+}
+
+#box-3 #carousel-item-1 {
+  height: 90vh;
+  width: 100%;
+  background-color: rgba(240, 240, 240, 0.9);
+}
+
+#box-3 #carousel-item-1 .doc {
+  left: 0;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: white;
+  margin-top: 5em;
+  padding: 3em;
+  box-shadow: -5px -5px 5px #888888;
+  text-align: center;
+}
+
+#box-1 .doc p {
+
+}
+
+#box-3 #carousel-item-2 {}
+#box-3 #carousel-item-3 {}
+#box-3 #carousel-item-4 {}*/
+
+h1 {
+  font-family:"Lucida Console", Monaco, monospace;
+  font-size:50px;
+  margin:0px;
+  text-align:left;
+  display:table-cell;
+  vertical-align:middle;
+}
+
+p {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size:20px;
+  margin:0px;
+  text-align:left;
+  vertical-align:middle;
+}
+
+/*****************************************
+** Testimonials
+*/
+.testimonials-clean {
+  color:#313437;
+  background-color:#eef4f7;
+}
+
+.testimonials-clean p {
+  color:#7d8285;
+}
+
+.testimonials-clean h2 {
+  font-weight:bold;
+  margin-bottom:40px;
+  padding-top:40px;
+  color:inherit;
+}
+
+@media (max-width:767px) {
+  .testimonials-clean h2 {
+    margin-bottom:25px;
+    padding-top:25px;
+    font-size:24px;
+  }
+}
+
+.testimonials-clean .intro {
+  font-size:16px;
+  max-width:500px;
+  margin:0 auto;
+}
+
+.testimonials-clean .intro p {
+  margin-bottom:0;
+}
+
+.testimonials-clean .people {
+  padding:50px 0 20px;
+}
+
+.testimonials-clean .item {
+  margin-bottom:32px;
+}
+
+@media (min-width:768px) {
+  .testimonials-clean .item {
+    height:220px;
+  }
+}
+
+.testimonials-clean .item .box {
+  padding:30px;
+  background-color:#fff;
+  position:relative;
+}
+
+.testimonials-clean .item .box:after {
+  content:'';
+  position:absolute;
+  left:30px;
+  bottom:-24px;
+  width:0;
+  height:0;
+  border:15px solid transparent;
+  border-width:12px 15px;
+  border-top-color:#fff;
+}
+
+.testimonials-clean .item .author {
+  margin-top:28px;
+  padding-left:25px;
+}
+
+.testimonials-clean .item .name {
+  font-weight:bold;
+  margin-bottom:2px;
+  color:inherit;
+}
+
+.testimonials-clean .item .title {
+  font-size:13px;
+  color:#9da9ae;
+}
+
+.testimonials-clean .item .description {
+  font-size:15px;
+  margin-bottom:0;
+}
+
+.testimonials-clean .item img {
+  max-width:40px;
+  float:left;
+  margin-right:12px;
+  margin-top:-5px;
+}
+
+/*****************************************
+** Process/Features
+*/
+.features-clean {
+  color:#313437;
+  background-color:#fff;
+  padding-bottom:30px;
+}
+
+@media (max-width:767px) {
+  .features-clean {
+    padding-bottom:10px;
+  }
+}
+
+.features-clean p {
+  color:#7d8285;
+}
+
+.features-clean h2 {
+  font-weight:bold;
+  margin-bottom:40px;
+  padding-top:40px;
+  color:inherit;
+}
+
+@media (max-width:767px) {
+  .features-clean h2 {
+    margin-bottom:25px;
+    padding-top:25px;
+    font-size:24px;
+  }
+}
+
+.features-clean .intro {
+  font-size:16px;
+  max-width:500px;
+  margin:0 auto 60px;
+}
+
+@media (max-width:767px) {
+  .features-clean .intro {
+    margin-bottom:40px;
+  }
+}
+
+.features-clean .item {
+  min-height:100px;
+  padding-left:80px;
+  margin-bottom:40px;
+}
+
+@media (max-width:767px) {
+  .features-clean .item {
+    min-height:0;
+  }
+}
+
+.features-clean .item .name {
+  font-size:20px;
+  font-weight:bold;
+  margin-top:0;
+  margin-bottom:20px;
+  color:inherit;
+}
+
+.features-clean .item .description {
+  font-size:15px;
+  margin-bottom:0;
+}
+
+.features-clean .item .icon {
+  font-size:40px;
+  color:#56c6c6;
+  float:left;
+  margin-left:-65px;
+}
+
+/*****************************************
+** Contact Form
+*/
+.contact-clean {
+  background-color:#eef4f7;
+  padding:80px 0;
+}
+
+@media (max-width:767px) {
+  .contact-clean {
+    padding:20px 0;
+  }
+}
+
+.contact-clean form {
+  max-width:480px;
+  width:90%;
+  margin:0 auto;
+  background-color:#ffffff;
+  padding:40px;
+  border-radius:4px;
+  color:#505e6c;
+  box-shadow:1px 1px 5px rgba(0,0,0,0.9);
+}
+
+@media (max-width:767px) {
+  .contact-clean form {
+    padding:30px;
+  }
+}
+
+.contact-clean h2 {
+  margin-top:5px;
+  font-weight:bold;
+  font-size:28px;
+  margin-bottom:36px;
+  color:inherit;
+}
+
+.contact-clean .form-group:last-child {
+  margin-bottom:5px;
+}
+
+.contact-clean form .form-control {
+  background:#fff;
+  border:1px solid #d4d4d4;
+  border-radius:2px;
+  box-shadow:1px 1px 1px rgba(0,0,0,0.05);
+  outline:none;
+  color:inherit;
+  padding-left:12px;
+  height:42px;
+}
+
+.contact-clean form .form-control:focus {
+  border:1px solid #b2b2b2;
+}
+
+.contact-clean form textarea.form-control {
+  min-height:100px;
+  max-height:260px;
+  padding-top:10px;
+  resize:vertical;
+}
+
+.contact-clean form .form-control-feedback {
+  height:42px;
+  line-height:42px;
+}
+
+.contact-clean form .help-block {
+  margin-top:8px;
+  font-size:13px;
+}
+
+.contact-clean form .btn {
+  padding:16px 32px;
+  box-shadow:none;
+  text-shadow:none;
+  opacity:0.9;
+  text-transform:uppercase;
+  font-weight:bold;
+  font-size:13px;
+  letter-spacing:0.4px;
+  line-height:1;
+  outline:none !important;
+}
+
+.contact-clean form .btn:active {
+  transform:translateY(1px);
+}
+
+.contact-clean form .btn-primary {
+  background-color:#055ada !important;
+  margin-top:15px;
+  color:#fff;
+}
+
+.contact-clean .text-danger {
+  color: #e74c3c;
+}
+
+
+/*** Submission Modal ***/
+.nav-modal form {
+  max-width:480px;
+  width:100%;
+  margin:0 auto;
+  background-color:#ffffff;
+  padding:40px;
+  border-radius:4px;
+  color:#505e6c;
+  /*box-shadow:1px 1px 5px rgba(0,0,0,0.1);*/
+}
+
+@media (max-width:767px) {
+  .nav-modal form {
+    padding:30px;
+  }
+}
+
+.nav-modal h2 {
+  margin-top:5px;
+  font-weight:bold;
+  font-size:28px;
+  margin-bottom:36px;
+  color:inherit;
+}
+
+.nav-modal .form-group:last-child {
+  margin-bottom:5px;
+}
+
+.nav-modal form .form-control {
+  background:#fff;
+  border:1px solid #d4d4d4;
+  border-radius:2px;
+  box-shadow:1px 1px 1px rgba(0,0,0,0.05);
+  outline:none;
+  color:inherit;
+  padding-left:12px;
+  height:42px;
+}
+
+.nav-modal form .form-control:focus {
+  border:1px solid #b2b2b2;
+}
+
+.nav-modal form textarea.form-control {
+  min-height:100px;
+  max-height:260px;
+  padding-top:10px;
+  resize:vertical;
+}
+
+.nav-modal form .form-control-feedback {
+  height:42px;
+  line-height:42px;
+}
+
+.nav-modal form .help-block {
+  margin-top:8px;
+  font-size:13px;
+}
+
+.nav-modal form .btn {
+  padding:16px 32px;
+  box-shadow:none;
+  text-shadow:none;
+  opacity:0.9;
+  text-transform:uppercase;
+  font-weight:bold;
+  font-size:13px;
+  letter-spacing:0.4px;
+  line-height:1;
+  outline:none !important;
+}
+
+.nav-modal form .btn:hover {
+  opacity:1;
+}
+
+.nav-modal form .btn:active {
+  transform:translateY(1px);
+}
+
+.nav-modal form .btn-primary {
+  background-color:#055ada !important;
+  margin-top:15px;
+  color:#fff;
+}
+
+.nav-modal .text-danger {
+  color: #e74c3c;
+}
